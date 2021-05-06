@@ -27,7 +27,7 @@ class Airplane(private val name: String) : Aircraft() {
 
 - [ ] Classes are initialized in the same order they are in the file, therefore, Aircraft should appear after Airplane
 - [ ] The code needs to pass the parameter to the base class's primary constructor. Since it does not, it receives a null
-- [ ] Abstract function always returns null
+- [x] Abstract function always returns null
 - [ ] A superclass is initialized before its subclass. Therefore, name has not been set before it is rendered
 
 #### Q3. Kotlin interfaces ad abstract classes are very similar. What is one thing abstract class can do that interfaces cannot?
@@ -68,7 +68,7 @@ fun add(a: Int, b: Int): Int {
 
 #### Q7. You are writing a console app in Kotlin that processes test entered by the user. If the user enters an empty string, the program exits. Which kind of loop would work best for this app? Keep in mind that the loop is entered at least once
 
-- [ ] a do..while loop
+- [x] a do..while loop
 - [ ] a for loop
 - [ ] a while loop
 - [ ] a forEach loop
@@ -296,7 +296,7 @@ val seq = sequence { yieldAll(1..20) }
 ```
 
 - [ ] You cannot assign a sequence to a variable
-- [ ] To produce result, a sequence must have terminal operation. In this case, it needs a .toList()
+- [x] To produce result, a sequence must have terminal operation. In this case, it needs a .toList()
 - [ ] The .filter{ it < 11 } should be .filter{ it > 11 }
 - [ ] The yieldAll(1..20) should be yieldAll(1..10)
 
@@ -340,7 +340,7 @@ import com.tekadept.app.model.User
 import com.tekadept.app.database.User
 
 class UserService{
-  fun translateUser(user: com.tekadept.app.database,Yser): User =
+  fun translateUser(user: com.tekadept.app.database.User): User =
     com.tekadept.app.model.User("${user.first} ${user.last}")
 }
 ```
@@ -350,23 +350,26 @@ class UserService{
 - [ ] Create interfaces with shorter names
 - [ ] Create extension classes with shorter names
 
-#### Q31. Your function is passed by a parameter obj of type Any. Which code snippet shows a way to retrieve the original type of obj, ncluding package information?
+#### Q31. Your function is passed by a parameter obj of type Any. Which code snippet shows a way to retrieve the original type of obj, including package information?
 
 - [ ] `obj.classInfo()`
 - [ ] `obj.typeInfo()`
-- [ ] `obj::class.simpleName`
+- [x] `obj::class.simpleName`
+[reference](https://kotlinlang.org/docs/reflection.html#constructor-references)
 - [ ] `obj::class`
 
 #### Q32. Which is the correct declaration of an integer array with a size of 5?
 
 - [ ] `val arrs[5]: Int`
-- [ ] `val arrs = IntArray[5]`
+- [x] `val arrs = IntArray[5]`
+[reference](https://kotlinlang.org/docs/basic-types.html#primitive-type-arrays)
 - [ ] `val arrs: Int[5]`
 - [ ] `val arrs = Array<Int>(5)`
 
 #### Q33. You have created a class that should be visible only to the other code in its module. Which modifier do you use?
 
-- [ ] `internal`
+- [x] `internal`
+[reference](https://kotlinlang.org/docs/visibility-modifiers.html#classes-and-interfaces)
 - [ ] `private`
 - [ ] `public`
 - [ ] `protected`
@@ -376,13 +379,14 @@ class UserService{
 - [ ] == determines if two primitive types are identical. === determines if two objects are identical
 - [ ] == determines if two references point to the same object. === determines if two objects have the same value
 - [ ] == determines if two objects have the same value. === determines if two strings have the same value
-- [ ] == determines if two objects have the same value. === determines if two references point to the same object
+- [x] == determines if two objects have the same value. === determines if two references point to the same object
+[reference](https://kotlinlang.org/docs/equality.html#structural-equality)
 
 #### Q35. Which snippet correctly shows setting the variable max to whichever variable holds the greatest value, a or b, using idiomatic Kotlin?
 
 - [ ] `val max3 = a.max(b)`
 - [ ] `val max = a > b ? a : b`
-- [ ] `val max = if (a > b) a else b`
+- [x] `val max = if (a > b) a else b`
 - [ ] `if (a > b) max = a else max = b`
 
 #### Q36. You have an enum class Signal that represents the state of a network connection. You want to print the position number of the SENDING enum. Which line of code does that?
@@ -394,7 +398,8 @@ enum class Signal { OPEN, CLOSED, SENDING }
 - [ ] `println(Signal.SENDING.position())`
 - [ ] `println(Signal.SENDING.hashCode())`
 - [ ] `println(Signal.SENDING)`
-- [ ] `println(Signal.SENDING.ordinal)`
+- [x] `println(Signal.SENDING.ordinal)`
+[reference](https://kotlinlang.org/docs/enum-classes.html#working-with-enum-constants)
 
 #### Q37. Both const and @JvmField create constants. What can const do that @JvmField cannot?
 
@@ -438,7 +443,8 @@ fun getAttribute(attribute: Attribute) : String {
 #### Q39. You would like to know each time a class property is updated. Which code snippet shows a built-in delegated property that can accomplish this?
 
 - [ ] `Delegates.watcher()`
-- [ ] `Delegates.observable()`
+- [x] `Delegates.observable()`
+[reference](https://kotlinlang.org/docs/delegated-properties.html#observable-properties)
 - [ ] `Delegates.rx()`
 - [ ] `Delegates.observer()`
 
@@ -464,7 +470,7 @@ fun main(){
 - [ ] `val name = null`
 - [ ] `var name: String`
 - [ ] `val name: String`
-- [ ] `val name: String? = null`
+- [x] `val name: String? = null`
 
 #### Q42. Which line of code is a shorter, more idiomatic version of the displayed snippet?
 
@@ -475,7 +481,7 @@ val len: Int = if (x != null) x.length else -1
 - [ ] `val len = x?.let{x.len} else {-1}`
 - [ ] `val len = x!!.length ?: -1`
 - [ ] `val len:Int = (x != null)? x.length : -1`
-- [ ] `val len = x?.length ?: -1`
+- [x] `val len = x?.length ?: -1`
 
 #### Q43. You are creating a Kotlin unit test library. What else should you add to make the following code compile without error?
 
@@ -508,3 +514,84 @@ class Record{
 - [ ] const makes COLOR faster, but not compatible with Java. Without const, SIZE is still compatible with Java
 - [ ] Both are immutable, but the use of the keyword const makes COLOR faster and mroe space efficient than SIZE
 
+#### Q45. Why does not this code snippet compile?
+
+```java
+class Cat (name: String) {
+  fun greet() { println("Hello ${this.name}") }
+}
+
+fun main(){
+  val thunderCat = Cat("ThunderCat")
+  thunderCat.greet()
+}
+```
+
+- [ ] Because name is a class parameter, not a property-it is unresolved ```main()```.
+- [ ] In order to create an instance of a class, you need the keyword ```new```
+- [ ] The reference to name needs to be scoped to the class, so it should be ```this.name```
+- [ ] Classes cannot be immutable. You need to change var to val
+
+#### Q46. The code below shows a typical way to show both index and value in many languages, including Kotlin. Which line of code shows a way to get both index and value more idiomatically?
+
+```java
+var ndx = 0;
+for (value in 1..5){
+  println("$ndx - $value")
+  ndx++
+}
+```
+
+- [ ] ```for( (ndx, value) in (1..20).withIndex() ){```
+- [ ] ```for( (ndx, value) in (1..20).pair() ){```
+- [ ] ```for( Pair(ndx, value) in 1..20 ){```
+- [ ] ```for( (ndx, value) in *(1..20) ){```
+
+#### Q47. The Kotlin .. operator can be written as which function?
+
+- [ ] a.from(b)
+- [ ] a.range(b)
+- [ ] a.rangeTo(b)
+- [ ] a.to(b)
+
+#### Q48. How can you retrieve the value of the property codeName without referring to it by name or destructuring?
+
+```java
+data class Project(var codeName: String, var version: String)
+fun main(){
+  val proj = Project("Chilli Pepper", "2.1.0")
+}
+```
+
+- [ ] ```proj.0```
+- [ ] ```proj[0]```
+- [ ] ```proj[1]```
+- [ ] ```proj.component1()```
+
+#### Q49. This function generates Fibonacci sequence. Which function is missing?
+
+```java
+fun fibonacci() = sequence {
+  var params = Pair(0, 1)
+  while (true) {
+    ___(params.first)
+    params = Pair(params.second, params.first + params.second)
+  }
+}
+```
+
+- [ ] with()
+- [ ] yield()
+- [ ] skip()
+- [ ] return()
+
+#### Q50. In this code snippet, why does the compiler not allow the value of y to change?
+
+```java
+for(y in 1..100) y+=2 
+```
+
+- [ ] y must be declared with var to be mutable
+- [ ] y is an implicitly immutable value
+- [ ] y can change only in a while loop
+- [ ] In order to change y, it must be declared outside of the loop

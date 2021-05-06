@@ -183,7 +183,7 @@
 #### Q30. Refer to the two following URLs. How can you make this data more readable in Google Analytics by mapping the actual product names to the ID in the URL? `.../shop/?ProductID=1234` `.../shop/?ProductID=5678`
 - [ ] Configure calculated metrics.
 - [ ] Use a custom import.
-- [ ] This functionality is not possible.
+- [x] This functionality is not possible.
 - [ ] Create a search and replace filter.
 
 #### Q31. What is this report an example of?
@@ -383,3 +383,21 @@
 - [x] yes, by viewing in page analytics
 - [ ] yes, with event tracking
 - [ ] no, not possible
+
+#### Q64. When you enable advertising features, what do you gain access to?
+- [ ] Google Ads data sync
+- [ ] enhanced UTM tracking
+- [ ] Google Adsense data sync
+- [ ] Demographics and Interests reports
+
+#### Q65. Which choice is an example of a micro goal?
+- [ ] playing a video before signing up
+- [ ] buying a product after reading an email
+- [ ] filling out a contact form after reading a social post
+- [ ] signing up for an account after clicking an ad
+
+#### Q65. What is the latest version of the analytics tracking tag?
+- [ ] gtag.js
+- [ ] urchin.js
+- [ ] gaq.push and ga.js
+- [ ] analytics.js

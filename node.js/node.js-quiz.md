@@ -71,7 +71,7 @@ To minimize memory costs, when possible prefer streaming via fs.createReadStream
  - [ ] node -p "process.os.cpus"
  - [x] node -p "os.cpus().length"
 
-#### Q12. Which of the following is a method on the console obejct?
+#### Q12. Which of the following is a method on the console object?
  - [ ] exit
  - [ ] test
  - [x] time
@@ -180,10 +180,10 @@ server.listen(port, hostname, () => { console.log(`server running at http://${ho
 
 #### Q27.What does the code shown below do?
 ```
-const fs = require('fs'); const os o require('os');
+const fs = require('fs'); const os = require('os');
 const system = os.platform(); const user = os.userInfo().username;
-fs.appendFilechello.txt'l 'Hello ${user} on ${system}r, (err) => { if (err) throw err; console.log('The data was appended to file!');
-) ;
+fs.appendFile('hello.txt', `Hello ${user} on ${system}`, (err) => { if (err) throw err; console.log('The data was appended to file!');}
+);
 ```
  - [x] creates a text file hello.txt and appends customized text
  - [ ] creates an image file
@@ -231,7 +231,7 @@ fs.appendFilechello.txt'l 'Hello ${user} on ${system}r, (err) => { if (err) thro
 - [ ] process
 - [ ] Buffer
 - [ ] root
-- [ ] require
+- [x] require
 
 ### Q35. What is the command to get a list of available commands for Node.js?What is the command to get a list of available commands for Node.js?
 - [ ] node index.js -x
@@ -286,3 +286,16 @@ fs.appendFilechello.txt'l 'Hello ${user} on ${system}r, (err) => { if (err) thro
 - [ ] const { readFile } = require(fs)
 - [ ] const { readFilePromises: readFile } = require(fs)
 - [ ] const { readFile } = require(promises)
+
+### Q44. According to the rules of semantic versioning, what does a release incrementing the third number in an npm version string communicate to users about the release changes?
+- [ ] Changes are not backwards compatible.
+- [ ] Changes might not be backward compatible and might break existing code.
+- [x] Changes are just bug fixes and no new features were added.
+- [ ] Changes will add new functionality but will not break any existing code.
+
+### Q45. What does REPL stand for?
+- [ ] run, examine, put, loop
+- [x] read, eval, print, loop
+- [ ] run, edit, print, loop
+- [ ] read, extend, print, loop
+

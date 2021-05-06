@@ -249,7 +249,7 @@ section + p {
 3. Internal; CSS is included within the <header> element of the HTML file.
 ```
 
-- [x]
+- [ ]
 
 ```markdown
 1. External; CSS is written in a separate file and is linked within the <head> element of the HTML file.
@@ -257,7 +257,7 @@ section + p {
 3. Inline; CSS is added to the HTML tag.
 ```
 
-- [ ]
+- [x]
 
 ```markdown
 1. External; CSS is written in a separate file and is linked within the <head> element of the HTML file .
@@ -985,3 +985,10 @@ a {color: red;}
 - [ ] `text-transform`
 - [ ] `font-variant`
 - [x] `letter-spacing`
+
+ #### Q82. What is the correct syntax for changing the curse from an arrow to a pointing hand when it interacts with a named element?
+
+- [x] `.element {cursor: pointer;}`
+- [ ] `.element {cursor: hand;}`
+- [ ] `.element {cursor: move-hand;}`
+- [ ] `.element {cursor: pointer-hand;}`

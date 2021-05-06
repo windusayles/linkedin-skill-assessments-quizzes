@@ -227,7 +227,7 @@
 - [ ] to share user profile information
 - [ ] to update an API configuration
 - [ ] to keep a web session active
-- [x] to retrive an access token
+- [x] to retrieve an access token
 
 #### Q39. What is Time to First Hello World?
 - [x] how long it takes for a developer to do something with your API
@@ -240,3 +240,59 @@
 - [ ] Expires:-1
 - [ ] Cache-Control: no-cache
 - [x] Cache-Control: no-store
+
+ #### Q41. What component hides the distinctions or boundaries between various microservices from end-client applications? 
+
+- [x] `API gateway`
+- [ ] `API logging `
+- [ ] `a layered system `
+- [ ] `API proxy`
+
+#### Q42. The textbook approach to api versioning is to use _____.
+
+- [ ] `common knowledge`
+- [ ] `URLs`
+- [ ] `no versioning`
+- [x] `the Accept header`
+
+#### Q43. Which is the most secure method to transmit an API key? 
+
+- [ ] `URL parameter`
+- [x] `Authorization header`
+- [ ] `Base64 encoding`
+- [ ] `Basic Auth`
+
+#### Q44. Within Oauth, what component validates the user's identity?  
+
+- [ ] `client`
+- [ ] `not specified`
+- [x] `authorization server`
+- [ ] `resource server`
+
+#### Q45. API traffic  that is entirely internal to your organisation is normally called ____? 
+
+- [ ] `inbound traffic`
+- [ ] `north-south traffic `
+- [x] `internal traffic `
+- [ ] `east-west traffic`
+
+#### Q46. What is the best approach for requesting JSON instead of XML from an API? 
+
+- [ ] `Add .json to the URL.`
+- [ ] `APIs do not use XML.`
+- [ ] `Use the Content-Type header.`
+- [x] `Use the Accept header.`
+
+#### Q47. When a user attempts to access a record that is not their own, whitch HTTP response code is the most appropriate? 
+
+- [ ] `403`
+- [ ] `404`
+- [x] `401`
+- [ ] `405`
+
+#### Q48. Which is a benefit of using an API gateway? 
+
+- [ ] `HTTP verbs`
+- [ ] `JSON payloads`
+- [ ] `HTTP response codes`
+- [x] `rate limiting/throttling`
