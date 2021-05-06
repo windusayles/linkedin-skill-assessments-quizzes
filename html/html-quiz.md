@@ -1118,3 +1118,19 @@ From [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr): The HT
   <caption>A table</caption>
 </table>
 ```
+
+#### Q72. Which choice is *not* a legal type attribute for the `<input>` tag?
+
+- [ ] `<input type="week">`
+- [ ] `<input type="color">`
+- [ ] `<input type="tel">`
+- [X] `<input type="num">`
+
+#### Q73. Given the file and directory structure shown here, what is the correct element to place in file `profit.html` to link to `info.html`?
+
+![File structure](images/ss-7.png?raw=true)
+
+- [ ] `<a href="info.html">See information</a>`
+- [ ] `<a href="../work/info.html">See information</a>`
+- [X] `<a href="../info.html">See information</a>`
+- [ ] `<a href="../../info.html">See information</a>`
